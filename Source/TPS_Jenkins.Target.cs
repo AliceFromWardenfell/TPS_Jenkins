@@ -8,7 +8,7 @@ public class TPS_JenkinsTarget : TargetRules
 {
 	public TPS_JenkinsTarget(TargetInfo Target) : base(Target)
 	{
-		Console.WriteLine("TPS game target =======================");
+		Console.WriteLine("TPS game target ======================");
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V4;
 
