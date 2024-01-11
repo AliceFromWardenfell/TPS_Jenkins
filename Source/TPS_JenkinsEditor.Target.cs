@@ -8,10 +8,10 @@ public class TPS_JenkinsEditorTarget : TargetRules
 {
 	public TPS_JenkinsEditorTarget(TargetInfo Target) : base(Target)
 	{
-        Console.WriteLine("TPS editor target =======================");
-        Type = TargetType.Editor;
+		Console.WriteLine("TPS editor target =======================");
+		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V4;
 
-		ExtraModuleNames.AddRange( new string[] { "TPS_Jenkins" } );
+		ExtraModuleNames.AddRange(new string[] { "TPS_Jenkins" });
 	}
 }
