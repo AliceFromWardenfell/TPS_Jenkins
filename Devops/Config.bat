@@ -12,7 +12,8 @@ set RunUATPath=%EnginePath5.3IB%\Engine\Build\BatchFiles\RunUAT.bat
 
 rem Project params
 set ProjectRoot=D:\JenkinsJobs\UE\Projects\TPS_Jenkins
-set ProjectName=TPS_Jenkins.uproject
+set ProjectNameWithoutExtension=TPS_Jenkins
+set ProjectName=%ProjectNameWithoutExtension%.uproject
 set ProjectPath=%ProjectRoot%\%ProjectName%
 
 rem Build params
@@ -24,3 +25,13 @@ rem Other params
 set SourceCodePath=%ProjectRoot%\Source
 set DirsToRemove=Intermediate DerivedDataCache Saved Binares .vs Build
 set FilesToRemove=*.sln
+
+rem Target params
+set COPYRIGHT_LINE=// Default copyright
+set EXTRA_MODULE_NAMES="%ProjectNameWithoutExtension%"
+set TargetTemplateFilePath=%ProjectRoot%\Devops\Targets\GameModule.Target.cs.template
+
+rem Run params
+set ServerExePath=%ProjectRoot%\Build\WindowsServer\%ProjectNameWithoutExtension%Server.exe
+set ClientExePath=%ProjectRoot%\Build\WindowsClient\%ProjectNameWithoutExtension%Client.exe
+set GameExePath=%ProjectRoot%\Build\Windows\%ProjectNameWithoutExtension%.exe
