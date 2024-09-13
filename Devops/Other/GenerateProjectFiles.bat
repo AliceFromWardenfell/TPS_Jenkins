@@ -1,3 +1,8 @@
 @echo off
 
-rem Youtube Life EXE, lesson 09, last section
+set EnginePath=%~1
+set UBTPathRelative=%~2
+set VersionSelector=%~3
+set ProjectPath=%CD%\%~4
+
+"%VersionSelector%" -switchversionsilent "%ProjectPath%" "%EnginePath%"

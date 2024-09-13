@@ -2,8 +2,7 @@
 
 call "%~dp0\..\Config.bat"
 
-FOR /R "%SourceCodePath%" %%f IN (*.cpp, *.h, *.cs) DO
-(
+for /R "%SourceCodePath%" %%f in (*.cpp, *.h, *.cs) do (
     clang-format -i "%%f"
     echo %%f
 )
