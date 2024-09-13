@@ -2,7 +2,6 @@
 
 using UnrealBuildTool;
 using System.Collections.Generic;
-using System;
 
 public class TPS_JenkinsEditorTarget : TargetRules
 {
